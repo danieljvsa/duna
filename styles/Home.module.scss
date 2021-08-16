@@ -1,0 +1,257 @@
+.container{
+  min-height: 100vh;
+  
+  .body_header{
+    height: 378px;
+    overflow: hidden;
+
+    .img_background{
+        background: url('../public/assets/bgHome.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--title);
+        height: 378px;
+        width: 100%;
+        background-position: 50% 50%;
+        color: var(--white);
+        filter: brightness(50%);
+        position: absolute;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 100px;
+        padding-top: 128px;
+        color: #f6f6f6;
+
+        h2{
+            position: relative;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-weight: 500;
+            font-size: 72px;
+            color: var(--bgSite);
+            z-index: 2;
+            text-transform: uppercase;
+        }
+
+        p{
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            padding-top: 19px;
+            position: relative;
+            color: var(--bgSite);
+            z-index: 2;
+            margin-top: 2rem;
+        }
+    }
+    
+  }
+
+  main{
+    background-color: var(--bgContent);
+
+    header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 100px 20px 100px;
+      h2{
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-weight: 500;
+        line-height: 24px;
+        font-size: 48px;
+        color: #B9995A;
+        margin-bottom: 26px;
+      }
+    }
+
+    .search{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2rem;
+
+      input{
+          border-radius: 5px;
+          width: 900px;
+          height: 65px;
+          padding: 0 100px;
+          border: none;
+          background-image: url('../public/assets/search-icon.svg');
+          background-position: 10px 18px; 
+          background-repeat: no-repeat;
+          font-size: 15px;
+          outline: none;
+          background-color: #B9995A;
+          color: #f6f6f6;
+      }
+
+      ::placeholder{
+          color: #f6f6f6;
+          opacity: 0.7;
+      }
+    }
+
+    .main_content{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0 100px;
+      padding: 100px 0;
+      row-gap: 68px;
+      column-gap: 111px;
+      
+      .card{
+          height: auto;
+          flex-grow: 1;
+          position: relative;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          min-width: 300px;
+          max-width: 350px;
+
+          .bg{
+              height: 222px;
+              background-image: url('../public/assets/bgHome.jpg');
+          }
+
+          .content_card{
+              background-color: var(--white);
+              padding-top: 24px;
+              padding-left: 30px;
+              padding-bottom: 30px;
+              padding-right: 30px;
+
+              h3{
+                  font-family: 'Yanone Kaffeesatz', sans-serif;
+                  font-weight: 500;
+                  line-height: 24px;
+                  font-size: 30px;
+                  color: var(--title);
+                  margin-bottom: 26px;
+              }
+
+              p{
+                  font-family: 'Yanone Kaffeesatz', sans-serif;
+                  font-weight: 400;
+                  line-height: 30px;
+                  font-size: 18px;
+                  color: var(--text);
+
+                  a{
+                    text-decoration: none;
+                    color: var(--text);
+                  }
+
+                  svg{
+                    font-size: 14px;
+                    margin-left: 2px;
+                  }
+              }
+          }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .search{
+    input{width: auto !important}
+  }
+}
+
+@media (max-width: 768px) {
+  .card{
+    width: 100% !important;
+  }
+
+  .main_content{
+    margin: 0 50px !important;
+    padding: 50px 0 !important;
+    row-gap: 20px !important;
+    column-gap: 20px !important;
+    flex-direction: column !important;
+  }
+
+  .title{
+    padding-top: 100px !important;
+
+    h2{
+      font-size: 58px !important;
+    }
+
+    p{
+      font-size: 18px !important;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .search{
+    input{
+      padding: 0 40px !important;
+    }
+  }
+
+  .main_content{
+    margin: 0 20px !important;
+    padding: 20px 0 !important;
+    row-gap: 15px !important;
+    column-gap: 15px !important;
+    flex-direction: column !important;
+  }
+
+  .title{
+    margin: 0 20px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .main_content{
+    margin: 0 !important;
+    padding: 20px 0 !important;
+    row-gap: 15px !important;
+    column-gap: 15px !important;
+    flex-direction: column !important;
+
+    .card{
+      min-width: none !important;
+      max-width: 50px !important;
+      width: auto !important;
+
+      .bg{
+        height: 180px !important;
+      }
+      
+      .content_card{
+        padding-top: 12px!important;
+        padding-left: 15px !important;
+        padding-bottom: 15px !important;
+        padding-right: 15px !important;
+
+        h3{
+          font-size: 22px !important;
+          margin-bottom: 13px !important;
+        }
+
+        p{
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 290px) {
+  .container{
+    overflow: hidden;
+  }
+}
