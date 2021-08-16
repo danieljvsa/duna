@@ -1,19 +1,17 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import React, { useContext } from 'react'
 import styles from '../styles/Home.module.scss'
 import {DunaContext, DunaProvider} from "../contexts/DunaConext";
 import { Book } from '../components/Book'
-import { Quote } from '../components/quote'
+import { Quote } from '../components/Quote'
 import { Search } from '../components/Search'
 
 
 export default function Home() {
-  const {quote, book, value, search, bookTitle} = useContext(DunaContext)
+  const {quote, book, value, bookTitle} = useContext(DunaContext)
 
   return (
-    <DunaProvider quote={quote} book={book} value={value} search={search} bookTitle={bookTitle}>
+    <DunaProvider quote={quote} book={book} value={value} bookTitle={bookTitle}>
       <div>
         <Head>
           <title>Duna</title>
