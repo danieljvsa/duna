@@ -11,7 +11,7 @@ export function Quote(){
               <div className={styles.img_background}></div>
               <div className={styles.title}>
                   <h2>Quote of day</h2>
-                  <p>"{quote}"
+                  <p>"{(quote == "") ? ("Fear is the mind-killer."): (quote)}"
                   </p>
               </div>
         </header>
